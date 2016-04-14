@@ -1,0 +1,25 @@
+# mac os x
+.DS_Store
+
+# archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.tar.gz
+*.zip
+*.bzip
+
+# temp Directories
+tmp
+
+# my favorite temp filename
+deleteme 
+
+## CTags
+#tags
+#.tags
+#.tags_sorted_by_file

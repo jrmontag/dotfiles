@@ -1,0 +1,9 @@
+# http://www.kernel.org/pub/software/scm/git/docs/git-config.html
+# http://stackoverflow.com/questions/267761/what-does-your-gitconfig-contain
+
+[user]
+  name = #<enter name here>
+  email = #<enter email here>
+
+[push]
+  default = current 
