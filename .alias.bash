@@ -9,17 +9,6 @@
 ####    Section: General   ####
 ###################################
 
-## color support of ls and company 
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
 
 # ls aliases
 #   a: show .foo; l: long listing; F: indicate dirs/symlinks graphically; G: color; H: follow symlinks
@@ -34,6 +23,21 @@ alias lll="ll"
 alias ring="echo -e '\a'"
 alias cler="clear"
 
+
+
+
+## color support of ls and company 
+# (note: these should be the last ls/grep/etc aliases)
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
 
 ###################################
