@@ -1,0 +1,18 @@
+# base 
+numpy
+scipy
+
+# math and modeling
+pandas
+scikit-learn
+statsmodels
+
+# charting 
+matplotlib
+seaborn
+
+# other utilities
+awscli
+jupyter
+ujson
+Cython
