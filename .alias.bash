@@ -119,4 +119,14 @@ mkcd() {
     mkdir $1 && cd $1
 }
 
+## report sizes of directories (sorted)
+alias dsize='for dir in *; do du -sk $dir; done | sort -n'
+
+# convert tsv (rule tag) to powertrack rules
+alias jqrules="jq '. | split(\"\n\") | map( split(\"\t\") | {value: .[0], tag: .[1]} ) | {rules: .}' -R -s"
+
+# look for big files in home directory
+homespace() {
+    sudo du -hS /home/ | sort -h
+}
 
