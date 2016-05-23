@@ -13,6 +13,8 @@ seaborn
 
 # other utilities
 awscli
+Cython
+gapi
+nltk
 jupyter
 ujson
-Cython
