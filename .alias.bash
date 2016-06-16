@@ -45,11 +45,12 @@ fi
 ###################################
 
 # git aliases
-alias gits="git status"
 alias gita="git add"
+alias gitb="git branch"
 alias gitc="git commit"
-alias gitp="git push"
 alias gitd="git diff"
+alias gitp="git push"
+alias gits="git status"
 
 
 
