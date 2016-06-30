@@ -1,7 +1,7 @@
 ########### 
 # Aliases
-#   - generally meant for bash shell
-#   - includes small functions    
+# - generally meant for bash shell
+# - includes small functions    
 ########### 
 
 
@@ -11,8 +11,12 @@
 
 
 # ls aliases
-#   a: show .foo; l: long listing; F: indicate dirs/symlinks graphically; G: color; H: follow symlinks
-#   (in order, so they build on each other)
+#   a: show .foo
+#   l: long listing 
+#   F: indicate dirs/symlinks graphically
+#   G: color
+#   H: follow symlinks
+#   (keep in order, so they build on each other)
 alias ls="ls -G"
 alias la="ls -a"
 alias ll="ls -alFGH"
@@ -22,7 +26,6 @@ alias lll="ll"
 # odds and ends
 alias ring="echo -e '\a'"
 alias cler="clear"
-
 
 
 
@@ -58,11 +61,6 @@ alias gits="git status"
 ####    Section: CLI Tools    ####
 ###################################
 
-## report sizes of directories (sorted)
-alias dsize='for dir in *; do du -sk $dir; done | sort -n'
-
-## create powertrack rules from "value" <TAB> "tag" text file
-alias jqrules="jq -R -s '. | split(\"\n\") | map( split(\"\t\") | {value: .[0], tag: .[1]} | select(.value != null) ) | { rules: . }'"
 
 ## return the forecast for arg or inferred loc
 wx () {
@@ -123,8 +121,10 @@ mkcd() {
 ## report sizes of directories (sorted)
 alias dsize='for dir in *; do du -sk $dir; done | sort -n'
 
-# convert tsv (rule tag) to powertrack rules
-alias jqrules="jq '. | split(\"\n\") | map( split(\"\t\") | {value: .[0], tag: .[1]} ) | {rules: .}' -R -s"
+# create powertrack rules from "rule value" <TAB> "tag" file
+alias jqrules="jq -R -s '. | split(\"\n\") | map( split(\"\t\") | {value: .[0], tag: .[1]} | select(.value != null) ) | { rules: . }'"
+
+
 
 # look for big files in home directory
 homespace() {
