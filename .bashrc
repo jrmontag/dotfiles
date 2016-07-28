@@ -50,4 +50,6 @@ if [ -d /mnt/tmp ]; then
 fi
 
 # source other handy things 
-[[ -s ${HOME}/.local.bash ]] && source ${HOME}/.local.bash
+[ -s ${HOME}/.local.bash ] && source ${HOME}/.local.bash
+[ -s ${HOME}/.utils.bash ] && source ${HOME}/.utils.bash
+
