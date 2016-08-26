@@ -124,10 +124,22 @@ alias dsize='for dir in *; do du -sk $dir; done | sort -n'
 # create powertrack rules from "rule value" <TAB> "tag" file
 alias jqrules="jq -R -s '. | split(\"\n\") | map( split(\"\t\") | {value: .[0], tag: .[1]} | select(.value != null) ) | { rules: . }'"
 
-
-
 # look for big files in home directory
 homespace() {
     sudo du -hS /home/ | sort -h
+}
+
+# fix matplotlibrc 'not a framework' error via backend 
+fix_mpl_backend() {
+    # is there a "check that this env variable exists" method?
+    if [ -ne "" "$VIRTUAL_ENV" ]; then 
+        RC_FILE=$(find $VIRTUAL_ENV -name "matplotlibrc")
+        sed -i .bak 's/macosx/Agg/' $RC_FILE
+        echo "created backup copy (.bak) of rc file..."
+    else
+        echo "No active virtualenv found." 
+        echo "Activate appropriate virtualenv and re-run this command..." 
+        echo
+    fi
 }
 
