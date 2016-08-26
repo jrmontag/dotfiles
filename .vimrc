@@ -26,7 +26,7 @@ set smartcase       " Override 'ignorecase' setting if search pattern contains u
 "set complete+=kspell " Enables use of CONTROL+N or CONTROL+P within Insert mode to complete words being typed.
 
 syntax on " Enable syntax highlighting.
-au BufRead,BufNewFile *.md set filetype=markdown    "Update syntax highlighting for .md Markdown extension
+autocmd BufRead,BufNewFile *.md set filetype=markdown    "Update syntax highlighting for .md Markdown extension
 "filetype plugin indent on " Enable file type specific indentation.
 "filetype plugin on  " enable file-specific behavior (not a fan of the Makefile behavior...)
 
@@ -35,8 +35,11 @@ au BufRead,BufNewFile *.md set filetype=markdown    "Update syntax highlighting 
 "map <Leader>cs :nohlsearch<cr>
 
 " Auto-Commands
-"autocmd FileType gitcommit setlocal spell " Enables spell checking for Git commits.
-"autocmd FileType markdown setlocal spell " Enables spell checking for Markdown files.
+" - spell-check on be defualt in text-y files
+autocmd FileType gitcommit setlocal spell   " Enables spell checking for Git commits
+autocmd FileType markdown setlocal spell    " Enables spell checking for Markdown files
+autocmd FileType txt setlocal spell    " Enables spell checking for Markdown files
+autocmd FileType rst setlocal spell    " Enables spell checking for Markdown files
 
 " Extensions
 " 2015-08-24 vim-pathogen (plugin management)
