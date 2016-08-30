@@ -35,11 +35,11 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown    "Update syntax highligh
 "map <Leader>cs :nohlsearch<cr>
 
 " Auto-Commands
-" - spell-check on be defualt in text-y files
-autocmd FileType gitcommit setlocal spell   " Enables spell checking for Git commits
-autocmd FileType markdown setlocal spell    " Enables spell checking for Markdown files
-autocmd FileType txt setlocal spell    " Enables spell checking for Markdown files
-autocmd FileType rst setlocal spell    " Enables spell checking for Markdown files
+" - spell-check "on" by default in text-y files
+autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal spell
+autocmd FileType txt setlocal spell
+autocmd FileType rst setlocal spell
 
 " Extensions
 " 2015-08-24 vim-pathogen (plugin management)
