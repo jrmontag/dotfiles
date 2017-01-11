@@ -11,6 +11,9 @@ unset RUBY_HEAP_MIN_SLOTS
 #   / misc 
 ######### 
 
+# autojump
+# $ brew install autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 
 ######### 
