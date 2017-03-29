@@ -1,8 +1,6 @@
-# base 
+# math and modeling
 numpy
 scipy
-
-# math and modeling
 pandas
 scikit-learn
 statsmodels
@@ -15,7 +13,7 @@ seaborn
 awscli
 Cython
 gapi
+jupyter
 pandashells[full]
 nltk
-jupyter
 ujson
