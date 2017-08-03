@@ -29,6 +29,7 @@ syntax on " Enable syntax highlighting.
 autocmd BufRead,BufNewFile *.md set filetype=markdown    "Update syntax highlighting for .md Markdown extension
 "filetype plugin indent on " Enable file type specific indentation.
 "filetype plugin on  " enable file-specific behavior (not a fan of the Makefile behavior...)
+"
 
 " Leaders (http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader) 
 "map <Leader>i mmgg=G`m
@@ -41,7 +42,31 @@ autocmd FileType markdown setlocal spell
 autocmd FileType txt setlocal spell
 autocmd FileType rst setlocal spell
 
-" Extensions
-" 2015-08-24 vim-pathogen (plugin management)
-" install via: https://github.com/tpope/vim-pathogen
+
+
+" vim-syntastic 
+" - https://github.com/vim-syntastic/syntastic
+" 'recommended settings' 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"
+" </ syntastic >
+
+
+" Pathogen (plugin management) 
+" - https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
+
+" vim + solarized 
+" - nb: this section must be *after* pathogen#infect()
+syntax enable
+set background=dark
+"set background=light
+colorscheme solarized
+" </ vim + solarized > 
