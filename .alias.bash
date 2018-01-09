@@ -55,7 +55,7 @@ alias gita="git add"
 alias gitb="git branch"
 alias gitc="git commit"
 alias gitd="git diff"
-alias gitp="git push"
+alias gitp="git pull"
 alias gits="git status"
 
 
