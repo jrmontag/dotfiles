@@ -55,7 +55,7 @@ alias gita="git add"
 alias gitb="git branch"
 alias gitc="git commit"
 alias gitd="git diff"
-alias gitp="git push"
+#alias gitp="git push"
 alias gits="git status"
 
 
@@ -107,7 +107,7 @@ tw_user_lookup () {
 
 ## enable use of conda in this (and child) shell 
 enable_conda() {
-    export PATH="${HOME}/anaconda/bin:$PATH"
+    export PATH="${HOME}/anaconda3/bin:$PATH"
 }
 
 ## slightly easier than typing it all out
@@ -132,17 +132,17 @@ homespace() {
     sudo du -hS /home/ | sort -h
 }
 
-# fix matplotlibrc 'not a framework' error via backend 
-fix_mpl_backend() {
-    # is there a "check that this env variable exists" method?
-    if [ -ne "" "$VIRTUAL_ENV" ]; then 
-        RC_FILE=$(find $VIRTUAL_ENV -name "matplotlibrc")
-        sed -i .bak 's/macosx/Agg/' $RC_FILE
-        echo "created backup copy (.bak) of rc file..."
-    else
-        echo "No active virtualenv found." 
-        echo "Activate appropriate virtualenv and re-run this command..." 
-        echo
-    fi
-}
+## fix matplotlibrc 'not a framework' error via backend 
+#fix_mpl_backend() {
+#    # is there a "check that this env variable exists" method?
+#    if [ -ne "" "$VIRTUAL_ENV" ]; then 
+#        RC_FILE=$(find $VIRTUAL_ENV -name "matplotlibrc")
+#        sed -i .bak 's/macosx/Agg/' $RC_FILE
+#        echo "created backup copy (.bak) of rc file..."
+#    else
+#        echo "No active virtualenv found." 
+#        echo "Activate appropriate virtualenv and re-run this command..." 
+#        echo
+#    fi
+#}
 

@@ -60,6 +60,10 @@ let g:syntastic_python_flake8_args='--ignore=E501,W291'
 "
 " </ syntastic >
 
+" airline
+
+" </ airline > 
+
 " YouCompleteMe
 " - https://valloric.github.io/YouCompleteMe/
 "let g:ycm_python_binary_path = 'python3'
