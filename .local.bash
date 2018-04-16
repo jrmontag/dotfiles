@@ -13,7 +13,7 @@ unset RUBY_HEAP_MIN_SLOTS
 
 # autojump
 # $ brew install autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+#[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 
 ######### 
@@ -25,7 +25,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
 # from the python bootstrap, per install instructions ( 2015-01-23 )
-PATH=/Users/jmontague/Python/PyPy-2.2.1/bin:$PATH
+#PATH=/Users/jmontague/Python/PyPy-2.2.1/bin:$PATH
 
 #   / python
 ########
