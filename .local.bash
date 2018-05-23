@@ -23,8 +23,10 @@ export EDITOR=$(which vim)
 #export PROJECT_HOME=$HOME/Devel
 #source /usr/local/bin/virtualenvwrapper.sh
 
-## anaconda (2017)
-source /Users/jmontague/anaconda3/etc/profile.d/conda.sh
+## anaconda 
+# anaconda -> miniconda
+#source /Users/jmontague/anaconda3/etc/profile.d/conda.sh
+source /Users/jmontague/miniconda3/etc/profile.d/conda.sh
 
 #   / python
 ########
