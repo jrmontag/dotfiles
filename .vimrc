@@ -58,10 +58,6 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown    "Update syntax highligh
 "filetype plugin on  " enable file-specific behavior (not a fan of the Makefile behavior...)
 "
 
-"Leaders (http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader) 
-"map <Leader>i mmgg=G`m
-"map <Leader>cs :nohlsearch<cr>
-
 " Auto-Commands
 "spell-check "on" by default in text-y files
 autocmd FileType gitcommit setlocal spell
@@ -86,10 +82,6 @@ let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args='--ignore=E501,W291'
 " </ syntastic >
 """"
-
-" YouCompleteMe
-" - https://valloric.github.io/YouCompleteMe/
-"let g:ycm_python_binary_path = 'python3'
 
 
 " Pathogen (plugin management) 
