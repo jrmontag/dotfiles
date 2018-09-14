@@ -20,7 +20,7 @@ create_default_packages:
   - ipython
   - argcomplete
   - flake8
-  - pyqt5
+  - pyqt
 
 
 # For more information about this file see:
