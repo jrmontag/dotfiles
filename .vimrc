@@ -1,3 +1,4 @@
+
 """"
 " < vundle > 
 " run ':PluginInstall' within vim to install
@@ -9,7 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins here
-" let Vundle manage Vundle, required
+" let Vundle manage Vundle (required)
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
@@ -26,7 +27,7 @@ filetype plugin indent on    " required
 """"
 
 
-"my settings
+"pure vim settings
 set history=1000    "Keep 1000 lines of history.
 set ruler           "Always show the cursor position.
 set number          "Always show line numbers
@@ -38,7 +39,7 @@ set tabstop=4       "Hard tab stop.
 set softtabstop=4   "Soft tab stop.
 
 set cursorline      "add a window-width horizontal line under the cursor 
-set scrolloff=3     "always keep extra 5 lines on the edges of the screen
+set scrolloff=3     "always keep extra lines on the edges of the screen
 set encoding=utf-8  "always, everywhere
 
 "set incsearch       "Incrementally highlight search pattern as it is updated.
@@ -66,6 +67,9 @@ autocmd FileType txt setlocal spell
 autocmd FileType rst setlocal spell
 
 
+
+"""" Plugin-specific settings """" 
+
 """"
 " vim-syntastic 
 " - https://github.com/vim-syntastic/syntastic
@@ -75,11 +79,16 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"additional settings
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_style_warning_symbol = '💩'
+" python-specific settings
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501,W291'
+let g:syntastic_python_flake8_args='--ignore=E302,E501,W291'
 " </ syntastic >
 """"
 
@@ -87,6 +96,7 @@ let g:syntastic_python_flake8_args='--ignore=E501,W291'
 " Pathogen (plugin management) 
 " - https://github.com/tpope/vim-pathogen
 "execute pathogen#infect()
+"
 
 """"
 " vim-solarized 
@@ -96,3 +106,4 @@ set background=dark
 colorscheme solarized
 " </ vim-solarized > 
 """"
+
