@@ -1,7 +1,9 @@
 
 """"
 " < vundle > 
-" run ':PluginInstall' within vim to install
+" to install, either:
+"  run ':PluginInstall' within vim to install
+"  $ vim +PluginInstall +qall 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
