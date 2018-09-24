@@ -1,8 +1,6 @@
 # BASHRC
 
 # Homebrew -- TODO (osx v. ubuntu) 
-# per the install info
-#export PATH=/usr/local/bin:$PATH 
 
 
 # shell history 
@@ -10,11 +8,6 @@ export HISTCONTROL=erasedups # Remove duplicate entries.
 export HISTSIZE=100000 # Keep a lengthy history.
 export HISTIGNORE="l:ls:ll:pwd:* --help" # Exclude mundane commands.
 
-
-# python virtualenv 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/development
-source /usr/local/bin/virtualenvwrapper.sh
 
 
 # git prompt 
@@ -40,6 +33,7 @@ function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+# git in prompt
 export PS1="\u@\h:\w \[\033[32m\]\$(parse_git_branch)\[\033[00m\]\n$ "
 
 
