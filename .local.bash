@@ -18,15 +18,9 @@ export EDITOR=$(which vim)
 ######### 
 #   python 
 
-# virtualenvwrapper setup (2015)
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/Devel
-#source /usr/local/bin/virtualenvwrapper.sh
-
-## anaconda 
-# anaconda -> miniconda
-#source /Users/jmontague/anaconda3/etc/profile.d/conda.sh
 source /Users/jmontague/miniconda3/etc/profile.d/conda.sh
+# added by Miniconda3 installer (JM: comment out for opt-in conda) 
+#export PATH="/Users/jmontague/miniconda3/bin:$PATH"
 
 #   / python
 ########

@@ -105,11 +105,6 @@ tw_user_lookup () {
 }
 
 
-### enable use of conda in this (and child) shell 
-#enable_conda() {
-#    export PATH="${HOME}/anaconda3/bin:$PATH"
-#}
-
 ## slightly easier than typing it all out
 refresh_shell() {
     echo "sourcing your ~/.bash_profile ..."
