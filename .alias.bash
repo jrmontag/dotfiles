@@ -67,7 +67,7 @@ alias gits="git status"
 
 ## return the forecast for arg or inferred loc
 wx () {
-    curl http://wttr.in/$1
+    curl wttr.in/$1
 }
 
 ## Tw userid <=> Tw screen name
